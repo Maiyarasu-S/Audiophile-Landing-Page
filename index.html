@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Audiophile Landing Page</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navbar -->
+<header class="navbar">
+  <div class="nav-left">
+    <img src="images/logo.png" class="logo-img" />
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Products</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+
+  <div class="nav-right">
+    <div class="cart" id="cart-icon">Cart🛒 (0)</div>
+    <button id="theme-toggle">🌙</button>
+    <button class="hamburger" id="hamburger">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+  </div>
+
+  <div class="nav-menu" id="nav-menu">
+    <ul class="nav-links-mobile">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Products</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Beginner Audiophile</h1>
+      <p>Experience high-quality sound at entry-level pricing.</p>
+      <button>Shop Now</button>
+    </div>
+    <div class="hero-image" data-aos="fade-left">
+      <div class="glow-wrap">
+        <img src="images/s2.png" alt="Product" />
+      </div>
+  </div>
+  </section>
+
+  <!-- Search & Filters -->
+<div class="filter-bar-wrapper">
+  <div class="filter-section">
+    <div class="filter-group">
+      <label for="filter-select">Filter:</label>
+      <select id="filter-select">
+        <option value="all">All</option>
+        <option value="budget">Budget (Under ₹3000)</option>
+        <option value="premium">Premium (₹3000+)</option>
+      </select>
+
+      <label for="sort-select">Sort:</label>
+      <select id="sort-select">
+        <option value="none">None</option>
+        <option value="low">Price: Low to High</option>
+        <option value="high">Price: High to Low</option>
+      </select>
+    </div>
+
+    <div class="search-group">
+      <input type="text" id="search-input" placeholder="Search products..." />
+    </div>
+  </div>
+</div>
+
+
+
+  <!-- Product List -->
+  <section id="product-list" class="product-list">
+    <!-- Products will be loaded here via JavaScript -->
+  </section>
+
+  <!-- Product Modal -->
+  <div class="modal-overlay" id="modal">
+    <div class="modal-content">
+      <span class="modal-close" id="modal-close">&times;</span>
+      <img id="modal-image" src="" alt="Product Image" />
+      <h3 id="modal-title"></h3>
+      <p id="modal-description"></p>
+      <div class="quantity-group">
+        <label for="modal-qty">Quantity:</label>
+        <input type="number" id="modal-qty" value="1" min="1" />
+      </div>
+      <button id="modal-add">Add to Cart</button>
+    </div>
+  </div>
+
+  <!-- Cart Summary -->
+  <div class="modal-overlay" id="cart-summary">
+    <div class="modal-content">
+      <span class="modal-close" id="cart-close">&times;</span>
+      <h2>Your Cart</h2>
+      <div id="cart-items"></div>
+      <p><strong>Total:</strong> ₹<span id="cart-total">0</span></p>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast">Added to Cart 🛒</div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+  <script>
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    if (link.href === window.location.href) {
+      link.classList.add('active');
+    }
+  });
+</script>
+</body>
+</html>
