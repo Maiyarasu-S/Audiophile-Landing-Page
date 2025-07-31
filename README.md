@@ -2,7 +2,7 @@
 
 <p align="center">
   A modern, responsive landing page for an audio gear store. <br>
-  Built with clean HTML, CSS, and JavaScript — designed with precision and passion. <br><br>
+  Built with clean HTML, CSS, and JavaScript - designed with precision and passion. <br><br>
   <img src="./assets/P1.png" alt="Desktop Preview" width="600"/>
 </p>
 
